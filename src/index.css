@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir';
+}
+
+#board {
+  display: flex;
+  width: 450px;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.square:hover {
+  background: #eee;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#head {
+  font-size: 25px;
+  padding: 15px;
+}
+
+
+/* making the sideless borders game board */
+.square:nth-child(7), .square:nth-child(8), .square:nth-child(9) {
+    border-bottom: 0;
+}
+
+.square:nth-child(1), .square:nth-child(2), .square:nth-child(3) {
+    border-top: 0;
+}
+
+.square:nth-child(3n+1) {
+    border-left: 0;
+}
+
+.square:nth-child(3n) {
+    border-right: 0;
+}
+/* /////////////////////////// */
+
+
+
+.selected {
+  font-size: 60px;
+  opacity: .55;
+}
+.reset-btn {
+  width: 354px;
+  height: 51px;
+  border-radius: 100px;
+  background-color: #3198e5;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 133px;
+  margin-right: 133px;
+  margin-top: 50px;
+}
+.reset-btn:hover{
+  cursor: pointer;
+  box-shadow: 0 .5px .6px #666;
+}
+.reset-btn:focus {
+  outline: none;
+}
+
+.headline {
+  font-size: 55px;
+  margin-top: 100px;
+  margin-bottom: -20px;
+}
+.game-over {
+  font-size: 40px;
+  margin-top: -335px;
+  position: absolute;
+}
+
+@keyframes blink {
+    0% {
+      opacity: .2;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .2;
+    }
+}
+.game-over span {
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.game-over span:nth-child(2) {
+    animation-delay: .2s;
+}
+.game-over span:nth-child(3) {
+    animation-delay: .4s;
+}
+.game-over span:nth-child(4) {
+    animation-delay: .6s;
+}
+.game-over span:nth-child(5) {
+    animation-delay: .8s;
+}
+.game-over span:nth-child(6) {
+    animation-delay: 1s;
+}
+.game-over span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.game-over span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+.game-over span:nth-child(9) {
+    animation-delay: 1.6s;
+}

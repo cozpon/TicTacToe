@@ -1,0 +1,8 @@
+{
+  "short_name": "Tic Tac Toe",
+  "name": "Ricky Peters Tic Tac Toe Code Challenge for Scoop",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
