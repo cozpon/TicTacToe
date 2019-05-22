@@ -60,7 +60,6 @@ class TicTac extends Component {
   checkWinner() {
     let board = this.state.board;
     for(let i = 0; i < winningMoves.length; i++) { // loop through possible winning move combinations
-      console.log(board);
       if(board[winningMoves[i][0]] === board[winningMoves[i][1]] && board[winningMoves[i][1]] === board[winningMoves[i][2]]) {
         // if the board array index matches a winning move, return either an X or an O
         return board[winningMoves[i][0]];
